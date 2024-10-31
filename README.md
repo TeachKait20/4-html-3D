@@ -82,7 +82,7 @@ style.css:
 * `forwards` — сохраняет конечное состояние;
 * `backwards` — сохраняет начальное состояние;
 * `both` — сохраняет начальное и конечное состояние в зависимости от направления.
-7. `animation-play-state — управляет проигрыванием анимации (running — запущено, paused — приостановлено).
+7. `animation-play-state` — управляет проигрыванием анимации (running — запущено, paused — приостановлено).
 ```css
 @keyframes spin {
     from { transform: rotateY(0deg); }
