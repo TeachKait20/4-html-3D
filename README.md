@@ -173,7 +173,7 @@ Model Viewer — это библиотека от Google, позволяющая
 
 ![image](https://github.com/user-attachments/assets/2743b398-e287-4402-92a9-d8ef6416578e)
 
-3. После редактирование (если оно было) библиотеку и помещаем в head страницы и копируем ссылку на параметры 3D модели в body страницы.
+3. После редактирование (если оно было) библиотеку помещаем в head страницы, а ссылку на параметры 3D модели в body страницы.
 * `<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>`
 * ![image](https://github.com/user-attachments/assets/f7742251-9bcf-4cac-bcac-e06f4e5a2de0)
 
