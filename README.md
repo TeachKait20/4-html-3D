@@ -99,3 +99,7 @@ style.css:
     animation: spin 5s infinite linear;
 }
 ```
+
+На выходе получаем:
+
+<img src="https://github.com/TeachKait20/NoneCode/blob/main/3D+html/rotate-obj.gif?raw=true">
