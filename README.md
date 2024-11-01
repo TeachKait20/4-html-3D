@@ -145,4 +145,4 @@ document.addEventListener('mousemove', (e) => {
 
 На выходе получаем:
 
-<src="https://github.com/TeachKait20/NoneCode/blob/main/3D+html/rotate-obj-js.gif?raw=true">
+<img src="https://github.com/TeachKait20/NoneCode/blob/main/3D+html/rotate-obj-js.gif?raw=true">
