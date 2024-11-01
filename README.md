@@ -142,3 +142,7 @@ document.addEventListener('mousemove', (e) => {
 * mousedown включает `isMouseDown`, чтобы указать начало вращения.
 * mouseup отключает `isMouseDown`, прекращая вращение.
 * mousemove отслеживает движение мыши и обновляет углы `rotationX` и `rotationY` на основе `movementX` и `movementY`, меняя угол вращения на основании перемещений мыши.
+
+На выходе получаем:
+
+<src="https://github.com/TeachKait20/NoneCode/blob/main/3D+html/rotate-obj-js.gif?raw=true">
