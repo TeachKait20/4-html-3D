@@ -103,3 +103,42 @@ style.css:
 На выходе получаем:
 
 <img src="https://github.com/TeachKait20/NoneCode/blob/main/3D+html/rotate-obj.gif?raw=true">
+
+## JS управление
+Для добавления вращения элемента при движении мыши можно использовать JavaScript, чтобы отследить движения мыши и обновить `transform` свойства элемента. Давайте добавим обработчики событий для мыши и реализуем вращение фигуры на основе её положения. <br><br>
+При этом анимацю CSS необходимо убрать или поместить в комментарий.
+```javascript
+const box = document.querySelector('.box');
+let isMouseDown = false; // флаг для отслеживания нажатия
+
+let rotationX = 0;
+let rotationY = 0;
+
+// Обработчик для начала вращения (при нажатии мыши)
+box.addEventListener('mousedown', (e) => {
+    isMouseDown = true;
+});
+
+// Обработчик для остановки вращения (при отпускании мыши)
+document.addEventListener('mouseup', () => {
+    isMouseDown = false;
+});
+
+// Обработчик движения мыши
+document.addEventListener('mousemove', (e) => {
+    if (!isMouseDown) return; // проверка, нажата ли мышь
+
+    // Движение мыши влияет на вращение объекта
+    rotationX += e.movementY * 0.5; // регулировка скорости вращения
+    rotationY += e.movementX * 0.5;
+
+    // Применение трансформации
+    box.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+});
+```
+**Флаги и переменные:**
+* `isMouseDown` отслеживает, нажата ли мышь, а rotationX и rotationY хранят текущий угол вращения.
+**Обработчики событий:**
+* mousedown включает `isMouseDown`, чтобы указать начало вращения.
+* mouseup отключает `isMouseDown`, прекращая вращение.
+* mousemove отслеживает движение мыши и обновляет углы `rotationX` и `rotationY` на основе `movementX` и `movementY`, меняя угол вращения на основании перемещений мыши.
