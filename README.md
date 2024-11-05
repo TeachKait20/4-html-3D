@@ -174,6 +174,27 @@ Model Viewer — это библиотека от Google, позволяющая
 ![image](https://github.com/user-attachments/assets/2743b398-e287-4402-92a9-d8ef6416578e)
 
 3. После редактирование (если оно было) библиотеку помещаем в head страницы, а ссылку на параметры 3D модели в body страницы.
-* `<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>`
-* ![image](https://github.com/user-attachments/assets/f7742251-9bcf-4cac-bcac-e06f4e5a2de0)
+* библиотека: `<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>`
+* ссылку на параметры 3D модели: ![image](https://github.com/user-attachments/assets/f7742251-9bcf-4cac-bcac-e06f4e5a2de0)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D model car</title>
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <model-viewer src="vaz_2107.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls tone-mapping="agx" poster="poster.webp" shadow-intensity="1.1" exposure="1" shadow-softness="0.78"></model-viewer>
+
+</body>
+</html>
+```
+На выходе получаем:
+
+<img src="https://github.com/TeachKait20/NoneCode/blob/main/3D+html/3d-car.gif?raw=true">
 
