@@ -5,7 +5,7 @@
 
 
 Для создания и работы с 3D-объектами в HTML, CSS и JavaScript можно использовать несколько методов и свойств, особенно с помощью CSS для базовых 3D-эффектов и JavaScript с WebGL для более сложных 3D-сцен. <br><br>
-В файлах вы сможете найти "Создание объекта" - тот, что создаётся по ходу изучения и "3D куб" - дополнительные файлы для общего понимания. 
+В файлах вы сможете найти "Создание объекта" - тот, что создаётся по ходу изучения, "3D куб" - дополнительные файлы для общего понимания и "3D model_1" - сделанную с помощью дополнительных средств страницу с 3D моделью. 
 
 ## CSS 3D Трансформации
 CSS позволяет применять базовые 3D-эффекты к HTML-элементам без использования JavaScript. Некоторые свойства для этого:
@@ -198,3 +198,110 @@ Model Viewer — это библиотека от Google, позволяющая
 
 <img src="https://github.com/TeachKait20/NoneCode/blob/main/3D+html/3d-car.gif?raw=true">
 
+Добавляем информацию и подключаем css:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D model car</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <h1>Drive Legends: Classics Reborn</h1>
+
+    <div id="content">
+        <div id="description">
+            <p>Встречайте обновлённый VAZ 2107 — легендарную классику в современной интерпретации! Эта модель, переработанная с нуля, добавлена в игру, чтобы перенести вас в атмосферу ностальгии с изюминкой современности. Каждая линия и каждая деталь автомобиля детализированы до мельчайших нюансов, чтобы максимально передать характер и душу машины, оставившей свой след в истории.</p>
+            <p>Особенности:</p>
+            <ul>
+                <li>Высокая детализация. Каждый элемент кузова, фары, бампер, и даже интерьер созданы с особым вниманием, чтобы подарить вам невероятно реалистичный опыт.</li>
+                <li>Система тюнинга. Прокачайте ваш VAZ 2107 как захотите! Доступны варианты для улучшения двигателя, подвески, колес и кузова — от классических до спортивных.</li>
+                <li>Адаптация под любой стиль езды. Подходит как для городской езды, так и для дрифта и гонок по трассе.</li>
+                <li>Поддержка AR. Вы сможете увидеть автомобиль прямо перед собой в реальной жизни благодаря технологии дополненной реальности.</li>
+            </ul> 
+        </div>
+
+        <div id="car-box">
+            <model-viewer 
+                src="vaz_2107.glb" 
+                ar 
+                ar-modes="webxr scene-viewer quick-look" 
+                camera-controls 
+                tone-mapping="agx" 
+                poster="poster.webp" 
+                shadow-intensity="1.1" 
+                exposure="1" 
+                shadow-softness="0.78">
+            </model-viewer>
+        </div>
+    </div>
+</body>
+</html>
+```
+```css
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 166, 0, 0.425);
+
+    font-family: "Itim", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 10;
+}
+
+h1 {
+    color: black;
+    font-weight: 800;
+    text-align: center;
+}
+
+#content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#car-box {
+    width: 50%;
+    max-width: 600px;
+    height: 450px;
+    background-color: #ffffff93;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+
+}
+
+model-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+#description {
+    width: 50%;
+    max-width: 600px;
+    height: 450px;
+    background-color: #ffffff93;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+```
+
+На выходе получаем:
+
+<img src="https://github.com/TeachKait20/NoneCode/blob/main/3D+html/3D-car-2.gif?raw=true">
